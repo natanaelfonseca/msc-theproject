@@ -32,3 +32,14 @@ services:
       - "EUREKASERVER_PORT=8761"
       - "CONFIGSERVER_PORT=8888"
       - "EUREKA_DEFAULT_ZONE=http://eurekaserver:8761/eureka/"
+
+  stockservice:
+    image: msc-stockservice
+    ports:
+      - "9020:9020"
+    environment:
+      - "PORT=9020"
+      - "PROFILE=default"
+      - "EUREKASERVER_PORT=8761"
+      - "CONFIGSERVER_PORT=8888"
+      - "EUREKA_DEFAULT_ZONE=http://eurekaserver:8761/eureka/"
