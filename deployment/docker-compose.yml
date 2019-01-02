@@ -16,7 +16,6 @@ services:
     environment:
       - "PORT=8888"
       - "PROFILE:default"
-      - "GITPASSWORD=.[]/Nvf3388GiT"
       - "EUREKASERVER_PORT=8761"
       - "EUREKA_DEFAULT_ZONE=http://eurekaserver:8761/eureka/"
       - "KEYSTORE_PASSWORD=foobar"
@@ -42,4 +41,15 @@ services:
       - "PROFILE=default"
       - "EUREKASERVER_PORT=8761"
       - "CONFIGSERVER_PORT=8888"
+      - "EUREKA_DEFAULT_ZONE=http://eurekaserver:8761/eureka/"
+
+  zuulsvr:
+    image: msc-gateway
+    ports:
+      - "5555:5555"
+    environment:
+      - "PORT=5555"
+      - "PROFILE:default"
+      - "EUREKASERVER_PORT=8761"
+      - "CONFIGSERVER_PORT=8888"      
       - "EUREKA_DEFAULT_ZONE=http://eurekaserver:8761/eureka/"
