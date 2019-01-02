@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "742c2234-927e-41fa-a326-a02958a7b487",
+		"name": "MicroServiceConcepts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MSC - Configuration Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8888/ms1/hml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"ms1",
+						"hml"
+					]
+				},
+				"description": "Request Configurations From Config Server. Git had been used as a backend server."
+			},
+			"response": []
+		},
+		{
+			"name": "MSC - Service Discovery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8761/eureka/apps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"eureka",
+						"apps"
+					]
+				},
+				"description": "Service Discovery com Eureka"
+			},
+			"response": []
+		},
+		{
+			"name": "MSC - BookWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9010/v1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9010",
+					"path": [
+						"v1",
+						"books"
+					]
+				},
+				"description": "Microservice relacionado a Livro"
+			},
+			"response": []
+		},
+		{
+			"name": "MSC - StockWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9020/v1/stocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9020",
+					"path": [
+						"v1",
+						"stocks"
+					]
+				},
+				"description": "Microservice relacionado ao Estoque"
+			},
+			"response": []
+		},
+		{
+			"name": "MSC - Api Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5555/api/bookws/v1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"api",
+						"bookws",
+						"v1",
+						"books"
+					]
+				},
+				"description": "Chamando microservicos atraves do Zuul"
+			},
+			"response": []
+		}
+	]
+}

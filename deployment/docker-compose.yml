@@ -22,7 +22,7 @@ services:
       - "KEY_PASSWORD=config"
 
   booksservice:
-    image: msc-booksservice
+    image: msc-bookservice
     ports:
       - "9010:9010"
     environment:
